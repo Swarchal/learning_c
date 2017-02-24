@@ -12,8 +12,7 @@ int main()
     long factor = 2;
 
     while (n > factor)
-    {   
-       //printf("%li\t%li\n", n, factor);
+    {
        if (n % factor == 0)
        {
             n /= factor;
@@ -21,7 +20,7 @@ int main()
        }
        else
        {
-            factor ++;
+            factor++;
        }
     }
     printf("%li\n", factor);

@@ -29,7 +29,6 @@ int main()
         first = second;
         second = next;
     }
- 
     printf("%li\n", sum_even);
     return 0;
 }
