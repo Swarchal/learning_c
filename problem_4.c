@@ -1,11 +1,8 @@
 /* A palindromic number reads the same both ways.
  * The largest palindrome made from the product
  * of two 2-digit numbers is 9009 = 91 × 99.
- * 
- * Find the largest palindrome made from the product of two 3-digit numbers
  *
- * can actually just do this in your head:
- *     largest palindrome number than 998001 (999*999) is 997799
+ * Find the largest palindrome made from the product of two 3-digit numbers
  */
 
 #include <stdio.h>
@@ -26,16 +23,21 @@ int reverse(int n)
 
 int main()
 {
-    int upper_limit = 999 * 999;
-    int lower_limit = 100*100;
-
-    for (int i = upper_limit; i >= lower_limit; i--)
+    long max_palindrome = 0;
+    for (int i=999; i>=100; i--)
     {
-        if (i == reverse(i))
+        for (int j=999; j>=100; j--)
         {
-            printf("%i\n", i);
-            break;
+            int value = i * j;
+            if (value == reverse(value))
+            {
+                if (value > max_palindrome)
+                {
+                    max_palindrome = value;
+                }
+            }
         }
     }
+    printf("%li\n", max_palindrome);
     return 0;
 }
