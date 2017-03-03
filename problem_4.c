@@ -23,7 +23,7 @@ int reverse(int n)
 
 int main()
 {
-    long max_palindrome = 0;
+    int max_palindrome = 0;
     for (int i=999; i>=100; i--)
     {
         for (int j=999; j>=100; j--)
@@ -38,6 +38,6 @@ int main()
             }
         }
     }
-    printf("%li\n", max_palindrome);
+    printf("%i\n", max_palindrome);
     return 0;
 }
