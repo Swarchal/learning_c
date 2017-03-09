@@ -57,7 +57,7 @@ int main()
             if (prime_count == 10001)
             {
                 printf("%i\n", current_prime);
-                return 0;;
+                return 0;
             }
 
         }
