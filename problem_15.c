@@ -16,13 +16,15 @@ int main()
     // create 21 by 21 array
     long arr[n+1][n+1];
 
-    //   
+    // pad top row and first column with all 1's  
     for (int i=1; i < (n+1); i++)
     {
         arr[0][i] = 1;
         arr[i][0] = 1;
     }
 
+    // loop through rows and col, number of combinations to
+    // get to index is (index above) + (index left)
     for (int row=1; row < (n+1); row++)
     {
         for (int col=1; col < (n+1); col++)
@@ -30,15 +32,8 @@ int main()
             arr[row][col] = arr[row-1][col] + arr[row][col-1];
         }
     }
-    
-    for (int row=1; row < (n+1); row++)
-    {
-        for (int col=1; col < (n+1); col++)
-        {
-            printf("%li\t", arr[row][col]);
-        }
-        printf("\n");
-    }
+
+    // print bottom right index    
     printf("%li\n", arr[n][n]);
     return 0;
 }
