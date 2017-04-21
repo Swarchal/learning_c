@@ -43,7 +43,6 @@ int main()
             total += i;
         }
     }
-    // bodge
     printf("%i\n", total);
     return 0;
 }
