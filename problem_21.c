@@ -40,10 +40,10 @@ int main()
 
         if (d(sum_div) == i && sum_div != i)
         {
-            total += sum_div + i;
+            total += i;
         }
     }
-    // duplicated each pair, so bodge is to just halve the total
-    printf("%i\n", total/2);
+    // bodge
+    printf("%i\n", total);
     return 0;
 }
