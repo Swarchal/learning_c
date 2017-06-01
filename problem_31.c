@@ -6,13 +6,8 @@ int main()
     int coins[] = {1, 2, 5, 10, 20, 50, 100, 200};
     int n[target];
 
-    // initialise array to all zeros
-    for (int i = 0; i <= target; i++)
-    {
-        n[i] = 0;
-    }
-
-    // set first value to 1
+    // initialise array to all zeros, first value as 1
+    for (int i = 0; i <= target; i++) n[i] = 0;
     n[0] = 1;
 
     for (int j = 0; j <= 8; j++)
