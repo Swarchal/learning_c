@@ -10,8 +10,8 @@ coins = [1, 2, 5, 10, 20, 50, 100, 200]
 n = [1] + [0] * target
 
 for coin in coins:
-    for j in range(coin, target+1):
-        n[j] += n[j - coin]
+    for i in range(coin, target+1):
+        n[i] += n[i - coin]
 
 print(n[-1])
 

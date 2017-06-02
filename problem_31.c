@@ -10,9 +10,9 @@ int main()
     for (int i = 0; i <= target; i++) n[i] = 0;
     n[0] = 1;
 
-    for (int j = 0; j <= 8; j++) {
-        for (int k = coins[j]; k <= target; k++) {
-            n[k] += n[k - coins[j]];
+    for (int i = 0; i <= 8; i++) {
+        for (int j = coins[i]; j <= target; j++) {
+            n[j] += n[j - coins[i]];
         }
     }
 
